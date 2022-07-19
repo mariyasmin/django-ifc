@@ -1,8 +1,6 @@
-from pyexpat import model
 from rest_framework.serializers import ModelSerializer 
 
-from core.models import Categoria
-from core.models import Editora 
+from core.models import Autor, Categoria, Editora, Livro
 
 class CategoriaSerializer(ModelSerializer): 
     class Meta:
@@ -13,3 +11,19 @@ class EditoraSerializer(ModelSerializer):
     class Meta:
         model = Editora
         fields = '__all__'
+
+class AutorSerializer(ModelSerializer):
+    class Meta:
+        model = Autor
+        fields = '__all__'
+
+class LivroSerializer(ModelSerializer):
+    class Meta:
+        model = Livro
+        fields = '__all__'
+
+class LivroDetailSerializer(ModelSerializer):
+    class Meta:
+        model = Livro
+        fields = '__all__'
+        depth = 1

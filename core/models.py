@@ -10,7 +10,7 @@ class Categoria(models.Model):
 
 class Editora(models.Model):
     nome = models.CharField(max_length=255)
-    site = models.URLField()
+    site = models.URLField(blank=True, null=True) 
 
     def __str__(self):
         return self.nome
