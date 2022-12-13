@@ -4,6 +4,10 @@ from django.utils.translation import gettext_lazy as _
 
 from core.models import Autor, Categoria, Editora, Livro, Usuario
 
+# from faker import Faker
+
+
+
 @admin.register(Autor)
 class AutorAdmin(admin.ModelAdmin):
     list_display = ("nome", "email")
